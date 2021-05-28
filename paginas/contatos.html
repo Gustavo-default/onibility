@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onibility - Transporte público</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="../css/estrutura-estilo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        .grid-container {
+            background-color: #ff0000;
+            grid-template-rows: none;
+            height: 100vh;
+        }
+
+        .main-grid {
+            margin: 0px 5%;
+            display: grid;
+            background-color: #f9f9f9;
+        }
+
+        #parte1 {
+            padding: 15px;
+            text-align: center;
+        }
+
+        #parte1 h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 0px;
+        }
+
+        #contato {
+            padding: 0px 1% 2% 1%;
+            background-color: #f9f9f9;
+            display: grid;
+        }
+
+        #contato h1 {
+            color: #000;
+            ;
+            font-weight: bold;
+        }
+
+        #form {
+            display: grid;
+            grid-template-columns: 0.5fr 0.5fr 1fr 1fr;
+            grid-template-areas:
+                "name name e_mail city"
+                "formit_Nome formit_Nome formit_Email formit_Cidade"
+                "subject subject subject subject"
+                "assuntos . . ."
+                "message message message message"
+                "formit_Texto formit_Texto formit_Texto formit_Texto"
+                "novidade novidade novidade novidade"
+                "formit_Butao . . .";
+            grid-gap: 5px 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        label span {
+            color:#ff0000;
+        }
+        .name {
+            grid-area: name;
+            padding-left: 1em;
+        }
+        
+        .formit_Nome {
+            grid-area: formit_Nome;
+            border-radius: 5px;
+            border: 1px solid #ff0000;
+            padding: 1em;
+        }
+        .e_mail {
+            grid-area: e_mail;
+            padding-left: 1em;
+        }
+        .formit_Email {
+            grid-area: formit_Email;
+            border-radius: 5px;
+            border: 1px solid #ff0000;
+            padding: 1em;
+        }
+        .city {
+            grid-area: city;
+            padding-left: 1em;
+        }
+        .formit_Cidade {
+            grid-area: formit_Cidade;
+            border-radius: 5px;
+            border: 1px solid #ff0000;
+            padding: 1em;
+        }
+        .message {
+            grid-area: message;
+            padding-left: 1em;
+        }
+        .formit_Texto {
+            grid-area: formit_Texto;
+            border-radius: 5px;
+            border: 1px solid #ff0000;
+            padding: 1em;
+            resize: none;
+        }
+        .subject {
+            grid-area: subject;
+            padding-left: 1em;
+        }
+        #assuntos {
+            grid-area: assuntos;
+            border-radius: 5px;
+            border: 1px solid #ff0000;
+            padding: 1em;
+        }
+        .novidade {
+            grid-area: novidade;
+            display: grid;
+            grid-template-columns: 0.1fr 1.9fr;
+            grid-template-areas: "input label";
+        }
+        .novidade input {
+            grid-area: input;
+            align-self: center;
+            justify-self: center;
+        }
+        .novidade label {
+            grid-area: label;
+            align-self: center;
+            padding: 5px;
+        }
+        .formit_Butao {
+            grid-area: formit_Butao;
+            border-radius: 5px;
+            padding: 1em;
+            background-color: #000;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        ::placeholder {
+            color: #292929;
+        }
+
+        @media screen and (max-width:720px) {
+            .main-grid {
+                margin: 0px;
+            }
+
+            #contato {
+                padding: 1% 3%;
+            }
+
+            #contato h1 {
+                text-align: center;
+            }
+
+            #form {
+                grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+                grid-template-areas:
+                    "name"
+                    "formit_Nome"
+                    "e_mail"
+                    "formit_Email"
+                    "city"
+                    "formit_Cidade"
+                    "message"
+                    "formit_Texto"
+                    "subject"
+                    "assuntos"
+                    "novidade"
+                    "formit_Butao";
+                grid-template-rows: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header-grid">
+            <div class="logo"><a href="../index.html">Oni<span>bility</span></a></div>
+            <nav class="menu-Pri">
+                <ul class="lista-menu">
+                    <li class="QuemSomos">
+                        <a href="../paginas/quem_Somos.html">Quem somos?</a>
+                    </li>
+                    <li class="Acessibilidade">
+                        <a href="#">Acessibilidade</a>
+                    </li>
+                    <li class="fale_Conosco">
+                        <a href="#">Fale Conosco</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-grid">
+            <section id="parte1">
+                <h1>Fale Conosco</h1>
+                <p>A Onibility mantém um canal aberto. Para nos enviar sua mensagem, basta preencher o formulário.</p>
+                <p>Campos marcados com * são obrigatórios</p>
+            </section>
+            <section id="contato">
+                <form id="form">
+                    <label for="nome" class="name">Nome <span>*</span></label>
+                    <input class="formit_Nome" id="nome" type="text" name="nome" required>
+                    <label for="email" class="e_mail">E-mail <span>*</span></label>
+                    <input class="formit_Email" id="email" type="email" nome="mail" required>
+                    <label for="cidade" class="city">Cidade <span>*</span></label>
+                    <input class="formit_Cidade" id="cidade" type="text" nome="cidade" required>
+                    <label for="msg" class="message">Mensagem <span>*</span></label>
+                    <textarea class="formit_Texto" id="msg" rows="10" cols="10" required></textarea>
+                    <label for="assuntos" class="subject">Assunto <span>*</span></label>
+                    <select name="assuntos" id="assuntos" required>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="critica">Crítica</option>
+                        <option value="elogio">Elogio</option>
+                        <option value="anunciar">Quero anunciar</option>
+                    </select>
+                    <div class="novidade">
+                        <label for="btn_Novidade">Clique aqui para receber as novidades da
+                            <span>Onibility</span></label>
+                        <input id="btn_Novidade" type="checkbox">
+                    </div>
+                    <button class="formit_Butao">Enviar</button>
+                </form>
+            </section>
+        </main>
+        <footer class="footer-grid">
+            <div class="contatos">
+                <figure class="cit">
+                    <img src="../imagens/licon.png">
+                    <figcaption>Rua do São Nunca, 666</figcaption>
+                </figure>
+                <figure class="cit">
+                    <img src="../imagens/phicon.png">
+                    <figcaption>(69)4002-8922</figcaption>
+                </figure>
+                <figure class="cit">
+                    <img src="../imagens/micon.png">
+                    <figcaption>shaolin.Matador.de.Porco&#64;bol.br</figcaption>
+                </figure>
+            </div>
+            <div class="copyright">
+                <p>2021 &copy; Onibilty</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../script/contatos.js"></script>
+</body>
+
+</html>
