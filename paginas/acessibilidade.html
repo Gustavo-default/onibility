@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onibilty - Transporte público</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estrutura-estilo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        .grid-container {
+            height: 108.9vh;
+        }
+        .imagem_principal{
+            background-color: #f9f9f9;
+            display: grid;
+        }
+        .recursos_principal{
+            background-image: url("../imagens/imagem_acess.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-size: cover;
+            background-position: center;
+            padding: 8% 0px;
+        }
+        .txt_imagem {
+            color:#fff;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000;
+        }
+        #txt_imagem1 {
+            font-size: 3.1em;
+            margin-bottom: 0px;
+        }
+        .parte2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                "blocoSec blocoSec1 blocoSec2";
+            padding: 1% 2%;
+        }
+        #blocoPri {
+            display: grid;
+            justify-items: center;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 3%;
+        }
+        #blocoPri h1{
+            color: #ff0000;
+            font-family: 'Concert One', cursive;
+            font-size: 2.4em;
+        }
+
+        #blocoPri2{
+            display: grid;
+            justify-items: center;
+            background-color: #181717ee;
+            color:#fff;
+            border-radius: 15px;
+            padding: 3%;
+        }
+        #blocoPri2 h1{
+            font-family: 'Concert One', cursive;
+            font-size: 2.4em;
+        }
+        #blocoPri3{
+            display: grid;
+            justify-items: center;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 3%;
+        }
+        #blocoPri3 h1{
+            color: #ff0000;
+            font-family: 'Concert One', cursive;
+            font-size: 2.4em;
+        }
+        @media screen and (max-width:720px) {
+            .imagem_principal {
+                display: grid;
+                
+            }
+            .recursos_principal {
+                height: auto;
+                background-size: 100%;
+                background-position-y: 0;
+                background-size: cover;
+                display: grid;
+                padding: 18% 0px;
+            }
+            .txt_imagem {
+                color: #fff;
+                text-shadow: 2px 2px 4px #000;
+                text-align: center;
+            }
+            #txt_imagem1 {
+                font-size: 1.5em;
+            }
+            #txt_imagem2 {
+                font-size: 1em;
+            }
+            .parte2 {
+                display: block;
+            }
+            #blocoPri h1 {
+                font-size: 2em;
+            }
+            #blocoPri1 h1 {
+                font-size: 2em;
+            }
+            #blocoPri2 h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header-grid">
+            <div class="logo"><a href="/index.html">Oni<span>bility</span></a></div>
+            <nav class="menu-Pri">
+                <ul class="lista-menu">
+                    <li class="QuemSomos">
+                        <a href="quem_Somos.html">Quem somos?</a>
+                    </li>
+                    <li class="Acessibilidade">
+                        <a href="acessibilidade.html">Acessibilidade</a>
+                    </li>
+                    <li class="fale_Conosco">
+                        <a href="contatos.html">Fale Conosco</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-grid">
+           <section class="imagem_principal">
+               <div class="recursos_principal">
+                   <div class="txt_imagem">
+                        <h1 id="txt_imagem1">Nossos recursos Acessíveis</h1>
+                        <h2 id="txt_imagem2">Confira alguns dos nossos serviços com acessibilidade.</h2>
+                   </div>    
+               </div>
+               <div class="parte2">
+                   <div id="blocoPri">
+                    <h1>Deficientes visuais</h1>
+                    <img id="img_visuais" src="../imagens/cego.png" width="50">
+                    <p>Para deficientes visuais, desenvolvemos um recurso que juntamente com sensores dentro do ônibus, ajudariam essas pessoas a se localizar dentro do veículo, através sons, indicando onde o passageiro está e lendo os avisos importantes que existem dentro do ônibus.</p>
+                   </div>
+                   <div id="blocoPri2">
+                     <h1>Deficientes fisicos</h1>
+                     <img id="img_fisicos" src="../imagens/pessoa-com-deficiencia.png" width="50">
+                     <p>Por meio de uma opção no aplicativo, o usuário consegue saber se o veículo que se dirige a ele, é ou não adaptado.
+                        Além de informar se o espaço, reservado para ele, já esta sendo utilizado. O usuário também tem acesso ao botão de parada direto do aplicativo.
+                        </p>
+                   </div>
+                   <div id="blocoPri3">
+                       <h1>Deficientes auditivos</h1>
+                       <img id="img_auditivos" src="../imagens/surdo.png" width="50">
+                       <p>Para auxilia-los, estamos desenvolvendo um painel no aplicativo, com leitura de todos os textos em libras. Em breve, também implementaremos um tradutor por foto, de qualquer texto para libras. Basta enviar a foto e o aplicativo automaticamente irá traduzir. </p>
+                   </div>
+               </div>
+            </section>
+        </main>
+        <footer class="footer-grid">
+            <div class="contatos">
+                <figure class="cit">
+                    <img src="../imagens/licon.png">
+                    <figcaption>Avenida Paulista</figcaption>
+                </figure>
+                <figure class="cit">
+                    <img src="../imagens/phicon.png">
+                    <figcaption>(00)0000-0000</figcaption>
+                </figure>
+                <figure class="cit">
+                    <img src="../imagens/micon.png">
+                    <figcaption>contato&#64;onibility.com</figcaption>
+                </figure>
+            </div>
+            <div class="copyright">
+                <p>2021 &copy; Onibilty</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
